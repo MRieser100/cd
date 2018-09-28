@@ -1,13 +1,19 @@
 class AppHeaderCtrl {
-  constructor(AppConstants, User, $scope) {
+  constructor(AppConstants) {
     'ngInject';
 
     this.appName = AppConstants.appName;
-    this.currentUser = User.current;
+    this.collapsed = true;
 
-    $scope.$watch('User.current', (newUser) => {
-      this.currentUser = newUser;
-    })
+    // this.currentUser = User.current;
+
+    // $scope.$watch('User.current', (newUser) => {
+    //   this.currentUser = newUser;
+    // })
+  }
+
+  toggleCollapsed() {
+    this.collapsed = !this.collapsed;
   }
 }
 

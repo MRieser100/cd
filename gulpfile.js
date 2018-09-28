@@ -9,6 +9,8 @@ var rename        = require('gulp-rename');
 var templateCache = require('gulp-angular-templatecache');
 var uglify        = require('gulp-uglify');
 var merge         = require('merge-stream');
+var sass          = require('gulp-sass');
+var log           = require('fancy-log');
 
 // Where our files are located
 var jsFiles   = "src/js/**/*.js";
@@ -27,6 +29,18 @@ var interceptErrors = function(error) {
   this.emit('end');
 };
 
+
+var scssFiles = "./src/public/stylesheets/sass/**/*.scss";
+var cssFiles  = "./build/";
+
+gulp.task('sass', function() {
+  return gulp.src(scssFiles)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(cssFiles))
+});
+gulp.task('sass:watch', function() {
+  gulp.watch(scssFiles, ['sass']);
+});
 
 gulp.task('browserify', ['views'], function() {
   return browserify('./src/js/app.js')
@@ -69,7 +83,7 @@ gulp.task('build', ['html', 'browserify'], function() {
   return merge(html,js);
 });
 
-gulp.task('default', ['html', 'browserify'], function() {
+gulp.task('default', ['html', 'browserify', 'sass', 'sass:watch'], function() {
 
   browserSync.init(['./build/**/**.**'], {
     server: "./build",

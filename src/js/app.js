@@ -11,13 +11,7 @@ import './config/app.templates';
 import './layout';
 import './components';
 import './home';
-import './profile';
-import './article';
 import './services';
-import './auth';
-import './settings';
-import './editor';
-
 
 // Create and bootstrap application
 const requires = [
@@ -26,12 +20,7 @@ const requires = [
   'app.layout',
   'app.components',
   'app.home',
-  'app.profile',
-  'app.article',
   'app.services',
-  'app.auth',
-  'app.settings',
-  'app.editor'
 ];
 
 // Mount on window for testing
