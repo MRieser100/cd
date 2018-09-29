@@ -8,4 +8,7 @@ let componentsModule = angular.module('app.components', []);
 import MainNavbarLinks from './main-navbar-links.component';
 componentsModule.component('mainNavbarLinks', MainNavbarLinks);
 
+import GraphicPageHeader from './graphic-page-header.component';
+componentsModule.component('graphicPageHeader', GraphicPageHeader);
+
 export default componentsModule;

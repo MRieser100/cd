@@ -48,3 +48,28 @@
   }
 }
 
+/* Home */
+.page-container {
+  width: 75%;  
+  height: 100%;
+  margin: auto;
+  // background-color: red;
+}
+.graphic-container {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.img-dragon-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.img-china-dynasty {  
+  margin-top: 15px;
+}
+.img-dragon-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -83,7 +83,13 @@ gulp.task('build', ['html', 'browserify'], function() {
   return merge(html,js);
 });
 
-gulp.task('default', ['html', 'browserify', 'sass', 'sass:watch'], function() {
+gulp.task('images', function() {
+  return gulp.src('./src/assets/img/**/*')
+    .on('error', interceptErrors)
+    .pipe(gulp.dest('./build/images'))
+})
+
+gulp.task('default', ['html', 'browserify', 'sass', 'sass:watch', 'images'], function() {
 
   browserSync.init(['./build/**/**.**'], {
     server: "./build",
