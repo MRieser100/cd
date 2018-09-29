@@ -1,21 +1,19 @@
-<nav class="navbar navbar-default navbar-light" role="navigation">
-  <div>
-    <div class="navbar-header">
+<!--<nav class="navbar navbar-default navbar-light" role="navigation">-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">  
       <a class="navbar-brand" ui-sref="app.home" ng-bind="::$ctrl.appName | lowercase"></a>
-
-      <button type="button" class="navbar-toggle" ng-class="{'collapsed': $ctrl.collapsed}" 
+      <button type="button" class="navbar-toggler" ng-class="{'collapsed': $ctrl.collapsed}" 
           ng-model="$ctrl.collapsed" ng-click="$ctrl.toggleCollapsed()">                
-          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+
+          <!--<span class="sr-only">Toggle navigation</span>-->
           <!-- Transition adapted from http://julienmelissas.com/animated-x-icon-for-the-bootstrap-navbar-toggle/ -->                
-          <span class="icon-bar top-bar"></span>
-          <span class="icon-bar middle-bar"></span>
-          <span class="icon-bar bottom-bar"></span>
+          <!--<span class="icon-bar top-bar"></span>-->
+          <!--<span class="icon-bar middle-bar"></span>-->
+          <!--<span class="icon-bar bottom-bar"></span>-->
       </button>
-    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar-collapse" ng-class="{'collapse': $ctrl.collapsed}">
+    <div class="navbar-collapse justify-content-end" ng-class="{'collapse': $ctrl.collapsed}">
       <main-navbar-links></main-navbar-links>
     </div>
-  </div>
 </nav>

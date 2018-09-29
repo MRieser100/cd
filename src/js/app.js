@@ -10,7 +10,14 @@ import './config/app.templates';
 // Import our app functionaity
 import './layout';
 import './components';
+import './about';
+import './contact';
 import './home';
+import './location';
+import './menu';
+import './newsletter';
+import './photos';
+import './restaurant-services';
 import './services';
 
 // Create and bootstrap application
@@ -19,7 +26,14 @@ const requires = [
   'templates',
   'app.layout',
   'app.components',
+  'app.about',
+  'app.contact',
   'app.home',
+  'app.location',
+  'app.menu',
+  'app.newsletter',
+  'app.photos',
+  'app.restaurant-services',
   'app.services',
 ];
 
