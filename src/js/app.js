@@ -17,6 +17,7 @@ import './location';
 import './menu';
 import './newsletter';
 import './photos';
+import './playground';
 import './restaurant-services';
 import './services';
 
@@ -33,6 +34,7 @@ const requires = [
   'app.menu',
   'app.newsletter',
   'app.photos',
+  'app.playground',
   'app.restaurant-services',
   'app.services',
 ];
