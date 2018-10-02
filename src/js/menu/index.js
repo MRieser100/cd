@@ -12,5 +12,7 @@ menuModule.config(MenuConfig);
 import MenuCtrl from './menu.controller';
 menuModule.controller('MenuCtrl', MenuCtrl);
 
+import MenuDisplayCtrl from './menu-display-controller';
+menuModule.controller('MenuDisplayCtrl', MenuDisplayCtrl);
 
 export default menuModule;

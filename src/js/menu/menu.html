@@ -1,1 +1,36 @@
-<graphic-page-header name="'Menu'"></graphic-page-header>
+<div class="page-container">
+    <graphic-page-header name="'Menu'"></graphic-page-header>
+    
+    <nav class="navbar navbar-light pomreport-navbar">
+        <div>
+            <ul class="nav nav-pills outline-active">
+                <li class="nav-item">
+                    <a class="nav-link" 
+                        ui-sref-active="active" 
+                        ui-sref="app.menu.view({type: 'japanese'})">
+                        Japanese
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" 
+                        ui-sref-active="active" 
+                        ui-sref="app.menu.view({type: 'sushi'})">
+                        Sushi
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" 
+                        ui-sref-active="active" 
+                        ui-sref="app.menu.view({type: 'thai'})">
+                        Thai
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ui-view="menu"></div>
+
+</div>
