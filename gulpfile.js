@@ -91,7 +91,7 @@ gulp.task('images', function() {
 })
 
 gulp.task('default', ['html', 'browserify', 'sass', 'sass:watch', 'images'], function() {
-log('NODE_ENV: ', process.env.NODE_ENV);
+  log('NODE_ENV: ', process.env.NODE_ENV);
   if (process.env.NODE_ENV === 'production') {
     connect.server({ // ** THIS IS DEFINITELY NOT THE RIGHT WAY TO WORK THIS - HAVING THIS gulp-connect server SERVE Express server??? **
       root: "./build",
