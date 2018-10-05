@@ -14,6 +14,15 @@
   color: #00CC00;
 }
 
+// @media (max-width: 480px) {
+//   .h-center-on-mobile {
+//     display: inline-block;
+//   }
+// }
+
+.no-margin {
+  margin: 0;
+}
 .margin-auto {
   margin: auto;
 }
@@ -124,3 +133,110 @@ html {
 .img-dayton-best-chinese-food {
   width: 100%;
 }
+
+/* Menu */
+@media (max-width: 1315px) {
+  .menu-wrapper {
+    text-align: center;
+  }
+}
+
+.menu-card-group {
+  .card {
+    max-height: 300px;
+  }
+}
+.menu-item-outer-wrapper {
+  position: relative;
+  // width: 175px; /* was 220px h/w */
+  // height: 175px;
+  width: 220px;
+  height: 220px;
+  // padding: 5px;
+  margin: 2px;
+  border: 1px lavender solid;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: left;  
+}
+.menu-item-wrapper { 
+  position: absolute;
+  top: 50%;
+  // left: 50%;
+  transform: translate(0, -50%); 
+  margin: 5px;
+  // width: 220px;
+  // height: 220px;
+  // padding: 5px;
+  // vertical-align: center;
+  // transform: translate(-50%, -50%);
+  // margin: 5px;
+  // background-color: lightgrey;
+  // border: 1px lavender solid;
+  // border-radius: 3px;
+  // display: inline-block;
+
+}
+.menu-item-title {
+  font-size: 0.85em;
+  color: steelblue;
+  font-weight: bolder;
+  line-height: 1;
+}
+.menu-title {
+  display: table;
+  margin: auto;
+  margin-bottom: 10px;  
+}
+.menu-item-foreign-txt {
+  font-size: 0.7em;
+}
+.menu-img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;  
+}
+.menu-item-description {
+  margin-top: 5px;
+  font-size: 0.8em;
+  line-height: 1;
+}
+.menu-item-price {
+
+}
+
+/* Menu - vertical TEST */
+.menu-outer-wrapper-horiz {
+  height: 180px;
+  padding: 0;
+}
+.menu-text-wrapper-horiz {
+  position: absolute;
+  top: 35%;
+  // bottom: 50%;
+  // transform: translate(0, -50%);
+}
+.menu-item-title-horiz {
+  font-size: 1.25em;
+  color: steelblue;
+  font-weight: bolder;
+  line-height: 1;
+}
+.menu-img-horiz {
+  // float: right;  
+  // position: absolute;
+  // top: 50%;
+  // bottom: 50%;
+  // transform: translate(0, -50%);  
+  margin-top: 15px;
+  display: block;
+  float: right;
+  // width: 95%;
+  // height: 95%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+/* Menu - Japanese */
