@@ -1,4 +1,5 @@
 var gulp          = require('gulp');
+var connect       = require('gulp-connect'); // add "gulp-connect": "^2.0.6", to package.json *NOTE: gulp-connect DEPRECATED
 var notify        = require('gulp-notify');
 var source        = require('vinyl-source-stream');
 var browserify    = require('browserify');
@@ -91,14 +92,23 @@ gulp.task('images', function() {
 
 gulp.task('default', ['html', 'browserify', 'sass', 'sass:watch', 'images'], function() {
 
-  browserSync.init(['./build/**/**.**'], {
-    server: "./build",
-    port: 4000,
-    notify: false,
-    ui: {
-      port: 4001
-    }
-  });
+  if (process.env.NODE_ENV === 'production') {
+    connect.server({ // ** THIS IS DEFINITELY NOT THE RIGHT WAY TO WORK THIS - HAVING THIS gulp-connect server SERVE Express server??? **
+      root: "./build",
+      // livereload: true,
+      port: process.env.PORT || 8080 // process.env.PORT provided by Heroku
+    });
+  } else {
+    browserSync.init(['./build/**/**.**'], {
+      server: "./build",
+      // port: 4000,
+      port: process.env.PORT || 8080, // process.env.PORT provided by Heroku
+      notify: false,
+      ui: {
+        port: 4001
+      }
+    });    
+  }
 
   gulp.watch("src/index.html", ['html']);
   gulp.watch(viewFiles, ['views']);
