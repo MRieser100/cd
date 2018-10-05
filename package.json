@@ -25,5 +25,9 @@
     "merge-stream": "^1.0.0",
     "popper.js": "^1.14.4",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "start": "node app",
+    "postinstall": "gulp default"
   }
 }
