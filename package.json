@@ -1,8 +1,8 @@
 {
-  "name": "conduit-angularjs",
+  "name": "cd-proto",
   "version": "1.0.0",
-  "description": "Angular frontend for Conduit",
-  "author": "Thinkster",
+  "description": "China Dynasty rework prototype",
+  "author": "Michael Rieser",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.0-rc.2",
@@ -26,9 +26,5 @@
     "merge-stream": "^1.0.0",
     "popper.js": "^1.14.4",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "scripts": {
-    "start": "node app",
-    "postinstall": "gulp default"
   }
 }
