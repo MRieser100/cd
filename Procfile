@@ -1,1 +1,1 @@
-web: gulp default
+web: npm install && gulp default
